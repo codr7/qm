@@ -1,0 +1,5 @@
+* add View with buf/pos
+* setup terminal
+* return end iterator from insert(buf)
+
+
