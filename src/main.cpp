@@ -8,7 +8,7 @@ using namespace qm;
 
 void buf_tests() {
   Buf b;
-  Pos p(2);
+
   assert(len(b) == 0);
   insert(b, Pos(1, 1), to_s("abcdef"));
   assert(len(b) == 9);
@@ -21,6 +21,7 @@ void buf_tests() {
 
 int main() {
   buf_tests();
+  
   Term term(cout);
   clear(term);
   move_to(term, Pos(20, 20));
