@@ -9,12 +9,11 @@
 namespace qm {
 
   struct Buf {
-    vector<S> text;
+    vector<S> rows;
   };
 
   void insert(Buf& buf, const Pos& pos, const S& val);
   size_t len(const Buf& buf);
-  
 }
 
 #endif

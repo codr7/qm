@@ -1,5 +1,26 @@
-* add View with buf/pos
+* add str(buf) + final test
+** add string to_utf8(s)
+* add View struct 
+** size/buf/pos
 * setup terminal
+* add arrow keys
+* add shift selection
+** track in View
 * return end iterator from insert(buf)
+* add vertical scrolling
+* add horizontal scrolling
+* add load/store(buf)
+** convert to/from utf8
+* add View status bar
+** hide until ESC
+** enter command mode on : from there
+*** use alang
+*** add Setting type
+**** vscroll-delta.set(2)
 
+Aight, lets do this before I change my mind again.
 
+I'm free tomorrow around 17:30.
+
+I don't do Google, but this should work unless you have a better suggestion:
+https://zoom.us/

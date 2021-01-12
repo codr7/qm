@@ -6,7 +6,7 @@
 namespace qm {
   
   struct Pos {
-    Pos(size_t tab, size_t row = 1, size_t col = 0): row(row), col(col) {}
+    Pos(size_t tab, size_t row = 0, size_t col = 0): row(row), col(col) {}
     size_t tab, row, col;
   };
 
