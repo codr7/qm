@@ -1,7 +1,7 @@
-* add Term struct
-** add move_to(term, pos) method
-* setup terminal
 * add Color struct
+** add set_fg/set_bg(Term, Color)
+* setup terminal
+** disable echo
 * add View struct 
 ** like Op
 ** draw method to Term

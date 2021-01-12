@@ -2,10 +2,11 @@
 #include <iostream>
 
 #include "qm/buf.hpp"
+#include "qm/term.hpp"
 
-int main() {
-  using namespace qm;
+using namespace qm;
 
+void buf_tests() {
   Buf b;
   Pos p(2);
   assert(len(b) == 0);
@@ -16,6 +17,12 @@ int main() {
   insert(b, Pos(2, 0), to_s("jkl"));
   assert(len(b) == 16);
   assert(str(b) == "\n abcghidef\njkl\n");
+}
 
+int main() {
+  buf_tests();
+  Term term(cout);
+  clear(term);
+  move_to(term, Pos(20, 20));
   return 0;
 }
