@@ -9,6 +9,7 @@ namespace qm {
   using S = u32string;
   using C = S::value_type;
   
+  string from_s(const S& in);
   S to_s(const string& in);
 }
 
