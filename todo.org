@@ -1,6 +1,14 @@
-* add View struct 
-** size/buf/pos
+* add Term struct
+** add move_to(term, pos) method
 * setup terminal
+* add Color struct
+* add View struct 
+** like Op
+** draw method to Term
+** width/height/pos
+** fg/bg_color
+* add Entry struct
+** buf/pos
 * add arrow keys
 * add shift selection
 ** track in View
@@ -9,9 +17,10 @@
 * add horizontal scrolling
 * add load/store(buf)
 ** convert to/from utf8
-* add View status bar
-** hide until ESC
-** enter command mode on : from there
-*** use alang
+* add optional status bar
+** hide until activated with esc
+** print tab/row/col
+** print last key code
+* add alang commandline
 *** add Setting type
 **** vscroll-delta.set(2)

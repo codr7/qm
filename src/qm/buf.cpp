@@ -6,7 +6,7 @@
 
 namespace qm {  
   void insert_line(Buf& buf, const Pos& pos, const S& val, bool endl) {
-    Pos p(pos.tab);
+    Pos p;
     
     if (buf.rows.size() > pos.row) {
       for (auto i = buf.rows.begin(); i != buf.rows.end(); i++) {
@@ -22,14 +22,12 @@ namespace qm {
       p.row = buf.rows.size();
     }
 
-    while (buf.rows.size() < pos.row+1) {
-      buf.rows.emplace_back();
-    }
-
+    while (buf.rows.size() < pos.row+1) { buf.rows.emplace_back(); }
+    
     S& s = buf.rows.back();
     if (pos.col > s.length()) { s.append(S(pos.col - s.length(), ' ')); }
     s.insert(pos.col, val);
-  }
+   }
 
   void insert(Buf& buf, const Pos& pos, const S& val) {
     auto ls = split(val, '\n');
