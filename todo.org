@@ -1,5 +1,3 @@
-* add Color struct
-** add set_fg/set_bg(Term, Color)
 * setup terminal
 ** disable echo
 * add View struct 

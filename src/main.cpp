@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "qm/buf.hpp"
+#include "qm/color.hpp"
 #include "qm/term.hpp"
 
 using namespace qm;
@@ -24,6 +25,11 @@ int main() {
   
   Term term(cout);
   clear(term);
-  move_to(term, Pos(20, 20));
+  move_to(term, Pos(0, 0));
+  //set_bg(term, Color(0, 0, 0));
+  //cout << "Hello" << endl;
+  set_bg(term, Color(255, 0, 0));
+  set_fg(term, Color(255, 255, 255));
+  cout << "Hello" << endl;
   return 0;
 }

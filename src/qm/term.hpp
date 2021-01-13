@@ -3,9 +3,10 @@
 
 #include <ostream>
 
-#include "qm/pos.hpp"
-
 namespace qm {
+  struct Color;
+  struct Pos;
+  
   struct Term {
     Term(ostream& out): out(out) {}
 
@@ -14,6 +15,8 @@ namespace qm {
 
   void clear(Term& term);
   void move_to(Term& term, const Pos& pos);
+  void set_bg(Term& term, const Color& bg);
+  void set_fg(Term& term, const Color& fg);
 }
 
 #endif
