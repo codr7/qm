@@ -20,16 +20,23 @@ void buf_tests() {
   assert(str(b) == "\n abcghidef\njkl\n");
 }
 
-int main() {
+int main() {  
   buf_tests();
   
-  Term term(cout);
+  Term term;
+  raw(term);
   clear(term);
-  move_to(term, Pos(0, 0));
-  //set_bg(term, Color(0, 0, 0));
-  //cout << "Hello" << endl;
-  set_bg(term, Color(255, 0, 0));
-  set_fg(term, Color(255, 255, 255));
-  cout << "Hello" << endl;
+
+  for (;;) {
+    char c = get_key(term);
+    move_to(term, Pos(0, 0));
+    set_bg(term, Color(255, 0, 0));
+    set_fg(term, Color(255, 255, 255));
+    cout << c;
+    cout.flush();
+    reset(term);
+    if (c == 27) { break; }
+  }
+    
   return 0;
 }

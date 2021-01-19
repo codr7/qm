@@ -1,10 +1,9 @@
-* setup terminal
-** disable echo
 * add View struct 
 ** like Op
 ** draw method to Term
 ** width/height/pos
-** fg/bg_color
+** draw key in lower left corner
+** fg/bg
 * add Entry struct
 ** buf/pos
 * add arrow keys
